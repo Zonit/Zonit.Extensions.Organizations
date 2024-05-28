@@ -1,11 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<AssemblyVersion>0.0.30</AssemblyVersion>
-		<FileVersion>$(AssemblyVersion)</FileVersion>
-		<Version>$(AssemblyVersion)</Version>
-	</PropertyGroup>
-
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
@@ -18,5 +11,4 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Zonit.Extensions.Organizations.Abstractions\Zonit.Extensions.Organizations.Abstractions.csproj" />
 	</ItemGroup>
-
 </Project>
