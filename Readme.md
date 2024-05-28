@@ -1,6 +1,6 @@
-## Supporting language culture
+## Zonit.Extensions.Organizations
 
-Advanced language support for Blazor. 
+An abstraction for organizational management for Blazor.
 
 **Nuget Package Abstraction**
 ```
