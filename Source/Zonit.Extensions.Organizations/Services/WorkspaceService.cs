@@ -37,7 +37,7 @@ internal class WorkspaceService : IWorkspaceProvider
         if (workspace is null)
             return false;
 
-        if (workspace.Permissions.Contains(GrantedPermission) || workspace.Permissions.Contains(permission))
+        if (workspace.Permissions.Contains(GrantedPermission, StringComparer.OrdinalIgnoreCase) || workspace.Permissions.Contains(permission, StringComparer.OrdinalIgnoreCase))
             return true;
 
         return false;
@@ -50,7 +50,7 @@ internal class WorkspaceService : IWorkspaceProvider
         if (workspace is null)
             return false;
 
-        if (workspace.Roles.Contains(GrantedRole) || workspace.Roles.Contains(role))
+        if (workspace.Roles.Contains(GrantedRole, StringComparer.OrdinalIgnoreCase) || workspace.Roles.Contains(role, StringComparer.OrdinalIgnoreCase))
             return true;
 
         return false;
