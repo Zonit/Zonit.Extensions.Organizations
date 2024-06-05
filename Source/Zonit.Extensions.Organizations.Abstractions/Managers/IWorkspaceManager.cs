@@ -9,12 +9,12 @@ public interface IWorkspaceManager
     /// Changes the state
     /// </summary>
     /// <param name="model"></param>
-    public void Inicjalize(WorkspaceModel? model);
+    public void Inicjalize(StateModel model);
 
     /// <summary>
     /// Retrieves details of the user's organization
     /// </summary>
-    public Task<WorkspaceModel> InicjalizeAsync();
+    public Task<StateModel> InicjalizeAsync();
 
     /// <summary>
     /// Change the default user organization
@@ -24,15 +24,19 @@ public interface IWorkspaceManager
     public Task SwitchOrganizationAsync(Guid organizationId);
 
     /// <summary>
-    /// Get all user organizations
-    /// </summary>
-    /// <returns></returns>
-    public Task<IReadOnlyCollection<OrganizationModel>?> GetOrganizationsAsync();
-
-    /// <summary>
     /// Workspace data
     /// </summary>
     public WorkspaceModel? Workspace { get; }
+
+    /// <summary>
+    /// Get all user organizations
+    /// </summary>
+    public IReadOnlyCollection<OrganizationModel>? Organizations { get; }
+
+    /// <summary>
+    /// User status, workspace, organization list, etc.
+    /// </summary>
+    public StateModel? State { get; }
 
     /// <summary>
     /// Event of changing the user organization

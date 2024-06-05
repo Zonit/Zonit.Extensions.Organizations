@@ -11,27 +11,26 @@ public sealed class ZonitOrganizationsExtension : ComponentBase, IDisposable
     [Inject]
     PersistentComponentState ApplicationState { get; set; } = default!;
 
-    WorkspaceModel? _workspace { get; set; }
+    StateModel? State { get; set; }
 
     PersistingComponentStateSubscription persistingSubscription;
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
         persistingSubscription = ApplicationState.RegisterOnPersisting(PersistData);
 
-        if (!ApplicationState.TryTakeFromJson<WorkspaceModel>("ZonitOrganizationsExtension", out var restored))
-        {
-            _workspace = await Workspace.InicjalizeAsync();
-        }
+        if (!ApplicationState.TryTakeFromJson<StateModel>("ZonitOrganizationsExtension", out var restored))
+            State = Workspace.State;
         else
-            _workspace = restored!;
+            State = restored!;
 
-        Workspace.Inicjalize(_workspace);
+        if(State is not null)
+            Workspace.Inicjalize(State);
     }
 
     private Task PersistData()
     {
-        ApplicationState.PersistAsJson("ZonitOrganizationsExtension", _workspace);
+        ApplicationState.PersistAsJson("ZonitOrganizationsExtension", State);
 
         return Task.CompletedTask;
     }
