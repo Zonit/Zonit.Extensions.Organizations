@@ -9,7 +9,9 @@ internal class WorkspaceMiddleware(RequestDelegate _next)
         IWorkspaceManager Workspace
     )
     {
-        await Workspace.InicjalizeAsync();
+        if(Workspace.State is null)
+            await Workspace.InicjalizeAsync();
+
         await _next(httpContext);
     }
 }
