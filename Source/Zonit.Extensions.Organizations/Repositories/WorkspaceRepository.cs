@@ -4,7 +4,7 @@ internal class WorkspaceRepository(IUserOrganizationManager _userWorkspace) : IW
 {
     public event Action? OnChange;
 
-    StateModel _state = new();
+    StateModel? _state;
 
     public WorkspaceModel? Workspace => _state?.Workspace; 
     public IReadOnlyCollection<OrganizationModel>? Organizations => _state?.Organizations;
@@ -24,6 +24,9 @@ internal class WorkspaceRepository(IUserOrganizationManager _userWorkspace) : IW
     
     public async Task SwitchOrganizationAsync(Guid organizationId)
     {
+        if (_state is null)
+            return;
+
         _state.Workspace = await _userWorkspace.SwitchOrganizationAsync(organizationId);
         StateChanged();
     }
