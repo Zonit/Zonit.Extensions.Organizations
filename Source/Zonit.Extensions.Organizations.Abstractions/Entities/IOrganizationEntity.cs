@@ -10,5 +10,5 @@ public interface IOrganizationEntity
     /// <summary>
     /// Data of the organization
     /// </summary>
-    //public OrganizationModel? Organization { get; }
+    public OrganizationModel? Organization { get; init; }
 }
