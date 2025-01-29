@@ -13,6 +13,11 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Zonit</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Zonit/Zonit.Extensions.Organizations</RepositoryUrl>
+
+	  <!-- Debugging symbol settings -->
+	  <IncludeSymbols>true</IncludeSymbols>
+	  <IncludeSource>true</IncludeSource>
+	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
