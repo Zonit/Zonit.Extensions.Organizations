@@ -1,0 +1,35 @@
+{
+  "TargetFrameworks": [
+    "net8.0",
+    "net9.0",
+    "net10.0"
+  ],
+  "ProjectsFound": 2,
+  "ChangeSummary": [
+    "Microsoft.Extensions.DependencyInjection.Abstractions: 9.0.1 → 9.0.11",
+    "Microsoft.Extensions.Hosting: 9.0.1 → 9.0.11"
+  ],
+  "PackageChanges": [
+    {
+      "Package": "Microsoft.Extensions.DependencyInjection.Abstractions",
+      "Framework": "net9.0",
+      "OldVersion": "9.0.1",
+      "NewVersion": "9.0.11"
+    },
+    {
+      "Package": "Microsoft.Extensions.Hosting",
+      "Framework": "net9.0",
+      "OldVersion": "9.0.1",
+      "NewVersion": "9.0.11"
+    }
+  ],
+  "PackagesFound": 2,
+  "Summary": {
+    "PackagesConfigured": 2,
+    "ProjectsUpdated": 2,
+    "PackagesChanged": 2,
+    "FrameworksSet": "net8.0;net9.0;net10.0",
+    "DirectoryPackagesPropsUpdated": true
+  },
+  "Timestamp": "2025-11-15 19:16:17"
+}
