@@ -1,46 +1,45 @@
 {
-  "Timestamp": "2025-11-16 05:04:13",
+  "ChangeSummaryText": "Microsoft.Extensions.DependencyInjection.Abstractions [net8.0]: 8.0.2 -> 10.0.0\nMicrosoft.Extensions.DependencyInjection.Abstractions [net9.0]: 9.0.11 -> 10.0.0\nMicrosoft.Extensions.Hosting [net8.0]: 8.0.1 -> 10.0.0\nMicrosoft.Extensions.Hosting [net9.0]: 9.0.11 -> 10.0.0",
+  "Timestamp": "2025-11-16 16:47:50",
   "PackageChanges": [
     {
       "Package": "Microsoft.Extensions.DependencyInjection.Abstractions",
-      "Framework": "net9.0",
-      "OldVersion": "9.0.1",
-      "NewVersion": "9.0.11"
+      "Framework": "net8.0",
+      "OldVersion": "8.0.2",
+      "NewVersion": "10.0.0"
     },
     {
       "Package": "Microsoft.Extensions.Hosting",
-      "Framework": "net9.0",
-      "OldVersion": "9.0.1",
-      "NewVersion": "9.0.11"
+      "Framework": "net8.0",
+      "OldVersion": "8.0.1",
+      "NewVersion": "10.0.0"
     },
     {
       "Package": "Microsoft.Extensions.DependencyInjection.Abstractions",
-      "Framework": "net10.0",
-      "OldVersion": "(new)",
+      "Framework": "net9.0",
+      "OldVersion": "9.0.11",
       "NewVersion": "10.0.0"
     },
     {
       "Package": "Microsoft.Extensions.Hosting",
-      "Framework": "net10.0",
-      "OldVersion": "(new)",
+      "Framework": "net9.0",
+      "OldVersion": "9.0.11",
       "NewVersion": "10.0.0"
     }
   ],
-  "ChangeSummaryText": "Microsoft.Extensions.DependencyInjection.Abstractions [net10.0]: (new) → 10.0.0\nMicrosoft.Extensions.DependencyInjection.Abstractions [net9.0]: 9.0.1 → 9.0.11\nMicrosoft.Extensions.Hosting [net10.0]: (new) → 10.0.0\nMicrosoft.Extensions.Hosting [net9.0]: 9.0.1 → 9.0.11",
-  "ProjectsFound": 2,
   "Summary": {
-    "ProjectsUpdated": 2,
+    "PackagesChanged": 4,
+    "FrameworkSpecificGroups": 3,
     "DirectoryPackagesPropsUpdated": true,
     "PackagesConfigured": 2,
-    "FrameworkSpecificPackages": 2,
-    "PackagesChanged": 4,
-    "CommonPackages": 0,
+    "ProjectsUpdated": 2,
     "FrameworksSet": "net8.0;net9.0;net10.0"
   },
+  "ProjectsFound": 2,
+  "PackagesFound": 2,
   "TargetFrameworks": [
     "net8.0",
     "net9.0",
     "net10.0"
-  ],
-  "PackagesFound": 2
+  ]
 }
