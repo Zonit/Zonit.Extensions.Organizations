@@ -1,9 +1,9 @@
 <Project>
   <PropertyGroup>
-	<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>0.1.8</AssemblyVersion>
+    <AssemblyVersion>0.1.50</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
     <Authors>Zonit</Authors>
@@ -11,12 +11,11 @@
     <PackageOutputPath>$(SolutionDir)Packages</PackageOutputPath>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Zonit</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/Zonit/Zonit.Extensions.Organizations</RepositoryUrl>
-
-	  <!-- Debugging symbol settings -->
-	  <IncludeSymbols>true</IncludeSymbols>
-	  <IncludeSource>true</IncludeSource>
-	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <RepositoryUrl>https://github.com/Zonit/Zonit.Extensions.Organizations</RepositoryUrl>
+    <!-- Debugging symbol settings -->
+    <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSource>true</IncludeSource>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
